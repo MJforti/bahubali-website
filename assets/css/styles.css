@@ -179,7 +179,10 @@ em, i { font-style: normal; }
 .card ul .ph { font-size: 20px; margin: 0; flex: none; }
 .intro-grid { display: grid; gap: var(--s-400); }
 @media (min-width: 960px) { .intro-grid { grid-template-columns: 1fr 1fr; gap: var(--s-700); } }
-.intro-grid p + p { margin-top: var(--s-200); }
+.facts { margin-top: var(--s-400); display: grid; gap: var(--s-300); }
+.facts div { display: grid; gap: var(--s-50); }
+.facts dt { color: var(--accent); }
+@media (min-width: 640px) { .facts div { grid-template-columns: 120px 1fr; gap: var(--s-300); align-items: baseline; } }
 .step-num { color: var(--accent); }
 
 /* Tagline */
