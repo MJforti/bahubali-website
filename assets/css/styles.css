@@ -212,6 +212,7 @@ em, i { font-style: normal; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-foot { margin-top: var(--s-300); display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-200); }
 .form-foot p { color: var(--muted); flex: 1 1 200px; }
+.form-foot a { text-decoration: underline; text-underline-offset: 4px; }
 .form-msg { display: none; margin-top: var(--s-200); padding: var(--s-100); border-radius: var(--r-lg); border: 1px solid var(--line); gap: var(--s-75); align-items: flex-start; }
 .form-msg.show { display: flex; }
 .form-msg .ph { font-size: 20px; flex: none; margin-top: var(--s-25); }
@@ -260,8 +261,10 @@ em, i { font-style: normal; }
 .footer .legal { margin-top: var(--s-400); }
 
 /* Mobile action bar */
-.action-bar { position: fixed; left: var(--s-100); right: var(--s-100); bottom: var(--s-100); z-index: 30; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--s-75); padding: var(--s-75); background: rgba(255,255,255,0.88); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid var(--line); border-radius: var(--r-2xl); }
-.action-bar .btn { border-radius: var(--r-lg); padding: var(--s-75); }
+.action-bar { position: fixed; left: var(--s-100); right: var(--s-100); bottom: var(--s-100); z-index: 30; display: flex; gap: var(--s-75); opacity: 0; visibility: hidden; transform: translateY(16px); transition: opacity 500ms var(--ease), transform 500ms var(--ease), visibility 0s linear 500ms; padding: var(--s-75); background: rgba(255,255,255,0.88); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid var(--line); border-radius: var(--r-2xl); }
+.action-bar.show { opacity: 1; visibility: visible; transform: none; transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
+.action-bar .btn { border-radius: var(--r-lg); padding: var(--s-75); flex: 1 1 0; }
+.action-bar .btn-primary { flex: 2 1 0; }
 @media (min-width: 768px) { .action-bar { display: none; } }
 
 /* Legal and 404 pages */
@@ -283,7 +286,7 @@ em, i { font-style: normal; }
 .no-js .tagline-text .w { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .mobile-menu a.m-link { transform: none; }
+  .reveal, .mobile-menu a.m-link, .action-bar { transform: none; }
   .tagline-text .w { opacity: 1; transition: none; }
   .card-link:hover, .btn:active, .card-link:active { transform: none; }
   .menu-toggle span, .skip-link, .faq-list summary .ph { transition: none; }

@@ -6,7 +6,8 @@
 
   /* ---------- Contact links from config ---------- */
   function waUrl(msg) { return 'https://wa.me/' + S.whatsapp + '?text=' + encodeURIComponent(msg || 'Hello Bahubali Enterprise, I have an enquiry.'); }
-  function disable(a, why) { a.removeAttribute('href'); a.setAttribute('aria-disabled', 'true'); a.classList.add('is-disabled'); a.title = why; }
+  // A contact route with no number is hidden, never shown as a dead or disabled button
+  function disable(a) { a.removeAttribute('href'); a.hidden = true; }
   $('[data-contact]').forEach(function (a) {
     var t = a.getAttribute('data-contact');
     if (t === 'call') {
@@ -23,6 +24,9 @@
   $('[data-fill="hours"]').forEach(function (el) { el.textContent = S.hours || ''; });
   $('[data-row="hours"]').forEach(function (el) { if (!S.hours) el.hidden = true; });
   $('[data-row="email"]').forEach(function (el) { if (!S.email) el.hidden = true; });
+  $('[data-row="phone"]').forEach(function (el) { if (!S.phone) el.hidden = true; });
+  $('[data-row="whatsapp"]').forEach(function (el) { if (!S.whatsapp) el.hidden = true; });
+  $('.alt').forEach(function (el) { if (!el.querySelector('a:not([hidden])')) el.hidden = true; });
   var mf = document.getElementById('map-frame'); if (mf && S.mapEmbed) mf.src = S.mapEmbed;
   var ml = document.getElementById('map-link'); if (ml && S.mapLink) ml.href = S.mapLink;
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
@@ -53,7 +57,11 @@
   });
 
   /* ---------- Scroll reveal + nav current ---------- */
+  var bar = document.querySelector('.action-bar'), heroCta = document.querySelector('.hero .btn-primary');
   if ('IntersectionObserver' in window) {
+    // The mobile action bar appears only once the hero CTA has left the screen, so one CTA shows at a time
+    if (bar && heroCta) new IntersectionObserver(function (es) { bar.classList.toggle('show', !es[0].isIntersecting); }).observe(heroCta);
+
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
@@ -69,7 +77,7 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     links.forEach(function (l) { var t = document.querySelector(l.getAttribute('href')); if (t) spy.observe(t); });
-  } else { $('.reveal').forEach(function (el) { el.classList.add('in'); }); }
+  } else { $('.reveal').forEach(function (el) { el.classList.add('in'); }); if (bar) bar.classList.add('show'); }
 
   /* ---------- Tagline word reveal ---------- */
   var tag = document.getElementById('tagline');

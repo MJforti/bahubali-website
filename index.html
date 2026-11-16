@@ -9,7 +9,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bahubali Enterprise | Hardware &amp; Building Materials Supplier">
 <meta property="og:description" content="Hardware and building materials for contractors, builders and businesses in Assam. Send your list once and get one clear quotation.">
-<meta property="og:image" content="assets/img/og-image.png">
+<meta property="og:image" content="https://bahubali-website.vercel.app/assets/img/og-image.png">
+<meta property="og:url" content="https://bahubali-website.vercel.app/">
+<link rel="canonical" href="https://bahubali-website.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F5F3EE">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -44,7 +46,7 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <a class="btn btn-primary button-sm" href="#quote">Request a quote</a>
+      <a class="btn btn-primary button-sm" href="#quote">Request a quotation</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
     </div>
   </nav>
@@ -160,13 +162,13 @@
     <div class="grid grid-3 reveal">
       <article class="card"><i class="ph ph-hard-hat" aria-hidden="true"></i><h3 class="heading-6">Contractors and builders</h3>
         <ul class="body-6"><li><i class="ph ph-check-circle" aria-hidden="true"></i>Quote a whole project list in one request</li><li><i class="ph ph-check-circle" aria-hidden="true"></i>Plan purchases stage by stage</li><li><i class="ph ph-check-circle" aria-hidden="true"></i>One contact for repeat requirements</li></ul>
-        <a class="btn btn-secondary button-sm" href="#quote" data-category="Project requirement (contractor or builder)">Get a project quote</a></article>
+        <a class="btn btn-secondary button-sm" href="#quote" data-category="Project requirement (contractor or builder)">Request a quotation</a></article>
       <article class="card"><i class="ph ph-storefront" aria-hidden="true"></i><h3 class="heading-6">Retailers, wholesalers and distributors</h3>
         <ul class="body-6"><li><i class="ph ph-check-circle" aria-hidden="true"></i>Enquire about stock for resale</li><li><i class="ph ph-check-circle" aria-hidden="true"></i>Discuss regular supply for your counter</li><li><i class="ph ph-check-circle" aria-hidden="true"></i>Explore a distribution partnership</li></ul>
         <a class="btn btn-secondary button-sm" href="#partner">Enquire as a partner</a></article>
       <article class="card"><i class="ph ph-buildings" aria-hidden="true"></i><h3 class="heading-6">Commercial and procurement buyers</h3>
         <ul class="body-6"><li><i class="ph ph-check-circle" aria-hidden="true"></i>Itemised quotations for approval</li><li><i class="ph ph-check-circle" aria-hidden="true"></i>Maintenance and fit out requirements</li><li><i class="ph ph-check-circle" aria-hidden="true"></i>Enquiries welcome from across India and abroad</li></ul>
-        <a class="btn btn-secondary button-sm" href="#quote" data-category="Commercial or procurement requirement">Send a requirement</a></article>
+        <a class="btn btn-secondary button-sm" href="#quote" data-category="Commercial or procurement requirement">Request a quotation</a></article>
     </div>
   </div>
 </section>
@@ -213,7 +215,7 @@
         <div class="field full"><label class="title-4" for="q-info">Additional information <span class="opt">(optional)</span></label><textarea id="q-info" name="Additional information" rows="3" placeholder="Site location, required date or anything else we should know"></textarea></div>
         <div class="hp" aria-hidden="true"><label>Leave this empty<input name="botcheck" tabindex="-1" autocomplete="off"></label></div>
       </div>
-      <div class="form-foot"><button class="btn btn-primary button-md" type="submit">Request a quotation</button><p class="caption-2">By sending this form you agree to our <a href="privacy.html" style="text-decoration:underline">privacy policy</a>.</p></div>
+      <div class="form-foot"><button class="btn btn-primary button-md" type="submit">Request a quotation</button><p class="caption-2">By sending this form you agree to our <a href="privacy.html">privacy policy</a>.</p></div>
       <div class="form-msg body-5" role="status" aria-live="polite"></div>
     </form>
   </div>
@@ -241,7 +243,7 @@
         <div class="field full"><label class="title-4" for="p-req">Partnership requirements</label><textarea id="p-req" name="Partnership requirements" rows="4" required aria-describedby="p-req-e" placeholder="Products of interest, expected volumes and how you would like to work with us"></textarea><span class="err caption-2" id="p-req-e">Tell us what kind of partnership you have in mind.</span></div>
         <div class="hp" aria-hidden="true"><label>Leave this empty<input name="botcheck" tabindex="-1" autocomplete="off"></label></div>
       </div>
-      <div class="form-foot"><button class="btn btn-primary button-md" type="submit">Send partnership enquiry</button><p class="caption-2">By sending this form you agree to our <a href="privacy.html" style="text-decoration:underline">privacy policy</a>.</p></div>
+      <div class="form-foot"><button class="btn btn-primary button-md" type="submit">Send partnership enquiry</button><p class="caption-2">By sending this form you agree to our <a href="privacy.html">privacy policy</a>.</p></div>
       <div class="form-msg body-5" role="status" aria-live="polite"></div>
     </form>
   </div>
@@ -280,8 +282,8 @@
         <dl class="contact-list">
           <div><i class="ph ph-map-pin" aria-hidden="true"></i><span><dt class="caption-2">Address</dt><dd class="body-2" data-fill="address">Bijoynagar, Assam, India</dd></span></div>
           <div data-row="hours"><i class="ph ph-clock" aria-hidden="true"></i><span><dt class="caption-2">Business hours</dt><dd class="body-2" data-fill="hours"></dd></span></div>
-          <div><i class="ph ph-phone" aria-hidden="true"></i><span><dt class="caption-2">Phone</dt><dd class="body-2"><a data-contact="call" data-fill="phone">Phone number to be added</a></dd></span></div>
-          <div><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><span><dt class="caption-2">WhatsApp</dt><dd class="body-2"><a data-contact="whatsapp" data-msg="Hello Bahubali Enterprise, I have an enquiry.">Message us on WhatsApp</a></dd></span></div>
+          <div data-row="phone"><i class="ph ph-phone" aria-hidden="true"></i><span><dt class="caption-2">Phone</dt><dd class="body-2"><a data-contact="call" data-fill="phone"></a></dd></span></div>
+          <div data-row="whatsapp"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><span><dt class="caption-2">WhatsApp</dt><dd class="body-2"><a data-contact="whatsapp" data-msg="Hello Bahubali Enterprise, I have an enquiry.">Message us on WhatsApp</a></dd></span></div>
           <div data-row="email"><i class="ph ph-envelope-simple" aria-hidden="true"></i><span><dt class="caption-2">Email</dt><dd class="body-2"><a data-contact="email"></a></dd></span></div>
         </dl>
         <a class="btn btn-secondary button-sm" id="map-link" href="https://maps.app.goo.gl/s28Tkmbo3NxCLpEr9" target="_blank" rel="noopener">Open in Google Maps<i class="ph ph-arrow-up-right" aria-hidden="true" style="font-size:16px;margin:0;color:inherit"></i></a>
@@ -320,7 +322,7 @@
 <div class="action-bar" role="group" aria-label="Quick contact">
   <a class="btn btn-secondary button-sm" data-contact="call"><i class="ph ph-phone" aria-hidden="true"></i>Call</a>
   <a class="btn btn-secondary button-sm" data-contact="whatsapp" data-msg="Hello Bahubali Enterprise, I would like a quotation for hardware and building materials."><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>WhatsApp</a>
-  <a class="btn btn-primary button-sm" href="#quote">Get quote</a>
+  <a class="btn btn-primary button-sm" href="#quote">Request a quotation</a>
 </div>
 
 <script src="assets/js/config.js"></script>
