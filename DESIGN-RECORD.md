@@ -18,10 +18,12 @@ Check this before changing anything visual. Base rules: landing-page-design skil
 - **Motion:** `cubic-bezier(0.22, 1, 0.36, 1)`, transform and opacity only, reduced motion respected.
 - **Icons:** Phosphor regular (self hosted subset).
 - **Photography:** one consistent set: soft daylight, warm neutral and graphite tones, stone or warehouse floor, no people, text or logos. Category images 3:2, hero symmetric warehouse aisle. Used as illustrations of material types, never captioned as the Bahubali premises. Without a photo a frame falls back to the graphite icon panel.
+- **Name:** Bahubali Enterprises (as on the shop sign).
+- **Catalogue:** the twelve lines on the shop signboard, in sign order; TMT rod and cement and pipe and fittings are the two feature tiles.
 - **Messaging:** hero headline "Building better foundations. Supplying every requirement." with the approved supporting text; benefits, steps and FAQs as approved.
 
 ## Rejected
-- Background gradients, glows, decorative shapes (gradient allowed on hero heading text only).
+- Background gradients, glows, decorative shapes (gradient allowed on hero heading text only, and as lighting on the 3D storefront's surfaces: light pools, ambient occlusion and sheen).
 - AI or stock images presented as the real Bahubali premises, staff or stock; any image with text or logos.
 - Testimonials, ratings, client logos, brand names, years in business, delivery promises, statistics: none until the owner supplies them.
 - Disabled or "to be added" contact buttons. Unconfigured contact routes are hidden.
@@ -37,3 +39,4 @@ Check this before changing anything visual. Base rules: landing-page-design skil
 - Redesign: premium industrial direction. Graphite header bar, split hero with materials index, photo ready catalogue with two feature tiles, dark numbered benefits, process timeline, dark quotation form, amber final CTA, four column footer, sitemap.
 - Photography: ten generated images added (watermark cropped), responsive WebP, hero preloaded; hero category index becomes a compact caption over the photo; share image rebuilt from the hero.
 - Hero: interactive 3D storefront from the real shop photo (CSS 3D layers, drag, touch and arrow keys, idle sway off under reduced motion) replaces the warehouse photo and category index; share image now shows the storefront.
+- Catalogue rebuilt to the twelve signboard lines; name corrected to Bahubali Enterprises. 3D storefront rebuilt: pillars, recessed opening with lit reveals, pavement and kerb, textured cladding and plaster, per face lighting, baked lettering glow.

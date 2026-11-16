@@ -1,6 +1,6 @@
-# Bahubali Enterprise website
+# Bahubali Enterprises website
 
-Static landing page for Bahubali Enterprise (hardware and building materials, Bijoynagar, Assam). Plain HTML, CSS and JavaScript with no build step.
+Static landing page for Bahubali Enterprises (hardware and building materials, Bijoynagar, Assam). Plain HTML, CSS and JavaScript with no build step.
 
 ## Files
 
@@ -29,11 +29,13 @@ Until `phone` and `whatsapp` are set, those buttons appear disabled.
 
 ## Photos
 
-`assets/img/photos/` holds nine AI generated illustrative category photos, each cropped to remove the generator watermark and saved as WebP at 800 and 1600px. They show generic materials, not the Bahubali premises or stock. To replace one, overwrite `NAME-800.webp` and `NAME-1600.webp` with a 3:2 image of the same name. Real photos of your own stock or premises will build more trust than generated ones.
+`assets/img/photos/` holds eight AI generated illustrative category photos used on seven of the twelve catalogue tiles, each cropped to remove the generator watermark and saved as WebP at 800 and 1600px. They show generic materials, not the Bahubali premises or stock. To replace one, overwrite `NAME-800.webp` and `NAME-1600.webp` with a 3:2 image of the same name. Real photos of your own stock or premises will build more trust than generated ones.
 
 ## 3D storefront
 
-The hero shows the real Bahubali Enterprises storefront as a 3D model visitors can turn by dragging (mouse or touch) or with the arrow keys. It is built in `assets/js/store3d.js` from layers cut out of the storefront photo in `assets/img/store/`: the stand off lettering, the 12 category boards, the signboard box, the Assamese banner and the shop front. It uses CSS 3D transforms, so it adds about 10 KB of script and no 3D library. It pauses when off screen, stops its idle sway for visitors who prefer reduced motion, and falls back to the flat photo on browsers without 3D support. A sharper, higher resolution storefront photo would make the model crisper.
+The hero shows the real Bahubali Enterprises storefront as a 3D model visitors can turn by dragging (mouse or touch) or with the arrow keys. It is built in `assets/js/store3d.js` from layers cut out of the storefront photo in `assets/img/store/`: the stand off lettering, the 12 category boards, the signboard box, the Assamese banner and the shop front. It uses CSS 3D transforms, so it adds about 10 KB of script and no 3D library. It pauses when off screen, stops its idle sway for visitors who prefer reduced motion, and falls back to the flat photo on browsers without 3D support. The pillars, recessed opening, reveals, pavement, side walls and roof are modelled separately with generated cladding, plaster, concrete and wood textures, and every face is shaded against a fixed light as the model turns. A sharper, higher resolution storefront photo would make the model crisper.
+
+The catalogue follows the twelve boards on the shop signboard. Five categories (CP fittings and sanitaryware, GRP tank, plywood and mica, Jal Jeevan Mission items, construction chemicals) show an icon panel until a photo is added: put `NAME-800.webp` and `NAME-1600.webp` in `assets/img/photos/` and add an `<img class="photo">` to that tile, as the other tiles do.
 
 ## Preview locally
 
