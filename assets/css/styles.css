@@ -329,3 +329,21 @@ em, i { font-style: normal; }
 .steps p { color: var(--muted); }
 .steps-cta { margin-top: var(--s-500); }
 @media (min-width: 960px) { .steps { grid-template-columns: repeat(3, 1fr); gap: var(--s-600); } .steps li { flex-direction: column; gap: var(--s-200); } }
+
+/* Segments: one sentence and text links per card, no check lists or extra buttons */
+.seg-links { margin-top: auto; padding-top: var(--s-200); display: flex; flex-wrap: wrap; gap: var(--s-100) var(--s-300); }
+.seg-links .ph { font-size: 16px; margin: 0; color: inherit; }
+
+/* Forms: field hint, partner form closed until asked for */
+.field .hint { color: var(--muted); }
+.aside-text { margin-top: var(--s-200); max-width: 680px; }
+.form-grid.closed { grid-template-columns: 1fr; }
+
+/* FAQ: heading beside the list, same split as benefits */
+.inline-link { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; transition: color 300ms var(--ease); }
+.inline-link:hover { color: var(--accent); }
+.split .faq-list { max-width: none; }
+
+/* Contact */
+.card .btn .ph { font-size: 16px; margin: 0; color: inherit; }
+.contact-grid .card { gap: var(--s-400); }

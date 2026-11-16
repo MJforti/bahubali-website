@@ -26,7 +26,7 @@
   $('[data-row="email"]').forEach(function (el) { if (!S.email) el.hidden = true; });
   $('[data-row="phone"]').forEach(function (el) { if (!S.phone) el.hidden = true; });
   $('[data-row="whatsapp"]').forEach(function (el) { if (!S.whatsapp) el.hidden = true; });
-  $('.alt').forEach(function (el) { if (!el.querySelector('a:not([hidden])')) el.hidden = true; });
+  $('.alt').forEach(function (el) { if (!el.querySelector('a:not([hidden]), button')) el.hidden = true; });
   var mf = document.getElementById('map-frame'); if (mf && S.mapEmbed) mf.src = S.mapEmbed;
   var ml = document.getElementById('map-link'); if (ml && S.mapLink) ml.href = S.mapLink;
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
@@ -44,6 +44,20 @@
     toggle.addEventListener('click', function () { setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  }
+
+  /* ---------- Partner form: closed until asked for, so the quotation form stays the main action ---------- */
+  var pOpen = document.getElementById('partner-open'), pForm = document.getElementById('partner-form'), pGrid = document.getElementById('partner-grid');
+  function openPartner(focus) {
+    if (!pForm || !pForm.hidden) return;
+    pForm.hidden = false; pForm.classList.add('in'); pGrid.classList.remove('closed');
+    pOpen.hidden = true; pOpen.setAttribute('aria-expanded', 'true');
+    if (focus) setTimeout(function () { document.getElementById('p-biz').focus({ preventScroll: true }); }, 50);
+  }
+  if (pOpen && pForm && pGrid) {
+    pForm.hidden = true; pOpen.hidden = false; pGrid.classList.add('closed');
+    pOpen.addEventListener('click', function () { openPartner(true); });
+    $('a[href="#partner"]').forEach(function (a) { a.addEventListener('click', function () { openPartner(false); }); });
   }
 
   /* ---------- Category prefill ---------- */

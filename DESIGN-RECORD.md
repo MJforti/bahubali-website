@@ -9,7 +9,8 @@ Check this before changing anything visual. Source of rules: landing-page-design
 - **Spacing:** only 0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96 px (`--s-*` tokens).
 - **Radius:** Tailwind steps only. Cards 16, form and hero sheet 24, inputs and buttons 8, nav pill full.
 - **Buttons:** padding 8 / 12, radius 8. Primary = ink fill, white text. Secondary = white fill, line border. Hover = color shift, active = scale 0.98, focus = 2px accent ring.
-- **Primary CTA label:** "Request a quotation" everywhere. Partner form keeps "Send partnership enquiry".
+- **Primary CTA label:** "Request a quotation" everywhere. Links to the partner form read "Become a partner"; its submit button reads "Send partnership enquiry".
+- **Section layouts:** text heavy sections (benefits, FAQ) use the split layout: heading left, content right. One primary button per section; other routes are text links.
 - **Motion:** `cubic-bezier(0.22, 1, 0.36, 1)`, transform and opacity only, reduced motion respected.
 - **Icons:** Phosphor regular (self hosted subset).
 - **Messaging:** hero headline, subheadline, benefits, three steps and FAQs as approved on 16 Nov 2026.
@@ -21,7 +22,11 @@ Check this before changing anything visual. Source of rules: landing-page-design
 - Showing disabled or "to be added" contact buttons on the live site. Unconfigured contact routes are hidden instead.
 - Repeating the same bordered card grid for every section. Cards are reserved for clickable or grouped items (segments, forms, FAQ, contact).
 - Varying the primary CTA wording ("Get quote", "Request a quote", "Send a requirement").
+- Two full forms open back to back. The partner form stays closed until the visitor asks for it.
+- Repeating the hero headline word for word in the final CTA.
+- Check mark bullet lists inside cards.
 - A second typeface or an uppercase tracked eyebrow style.
 
 ## Change log
 - Audit pass 1: hero and CTA system, about, product categories, benefits, how it works.
+- Audit pass 2: who we serve, quote and partner forms, FAQ, contact, final CTA.
