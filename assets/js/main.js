@@ -17,7 +17,7 @@
       if (S.whatsapp) { a.href = waUrl(a.getAttribute('data-msg')); a.target = '_blank'; a.rel = 'noopener'; }
       else disable(a, 'WhatsApp number to be added');
     } else if (t === 'email') {
-      if (S.email) { a.href = 'mailto:' + S.email; a.textContent = S.email; }
+      if (S.email) { a.href = 'mailto:' + S.email; a.textContent = S.email; } else a.hidden = true;
     }
   });
   $('[data-fill="address"]').forEach(function (el) { if (S.address) el.textContent = S.address; });
@@ -27,6 +27,19 @@
   $('[data-row="phone"]').forEach(function (el) { if (!S.phone) el.hidden = true; });
   $('[data-row="whatsapp"]').forEach(function (el) { if (!S.whatsapp) el.hidden = true; });
   $('.alt').forEach(function (el) { if (!el.querySelector('a:not([hidden]), button')) el.hidden = true; });
+  /* Photos: only files listed in SITE.photos are requested, so a missing image never shows as broken */
+  var photos = S.photos || [];
+  $('img[data-photo]').forEach(function (img) {
+    var name = img.getAttribute('data-photo');
+    if (photos.indexOf(name) === -1) { img.remove(); return; }
+    var base = 'assets/img/photos/' + name;
+    var frame = img.closest('[data-photo-frame]');
+    img.addEventListener('load', function () { if (frame) frame.classList.add('has-photo'); });
+    img.addEventListener('error', function () { img.remove(); });
+    img.srcset = base + '-800.webp 800w, ' + base + '-1600.webp 1600w';
+    img.sizes = name === 'hero' ? '(min-width: 1024px) 42vw, 100vw' : '(min-width: 1024px) 50vw, 100vw';
+    img.src = base + '-1600.webp';
+  });
   var mf = document.getElementById('map-frame'); if (mf && S.mapEmbed) mf.src = S.mapEmbed;
   var ml = document.getElementById('map-link'); if (ml && S.mapLink) ml.href = S.mapLink;
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
@@ -71,10 +84,19 @@
   });
 
   /* ---------- Scroll reveal + nav current ---------- */
-  var bar = document.querySelector('.action-bar'), heroCta = document.querySelector('.hero .btn-primary');
+  var bar = document.querySelector('.action-bar'), heroCta = document.querySelector('.hero-actions .btn');
   if ('IntersectionObserver' in window) {
     // The mobile action bar appears only once the hero CTA has left the screen, so one CTA shows at a time
     if (bar && heroCta) new IntersectionObserver(function (es) { bar.classList.toggle('show', !es[0].isIntersecting); }).observe(heroCta);
+    // Hide the bar while a form is on screen so it never covers fields or the submit button
+    if (bar) {
+      var onForm = new Set();
+      var formIo = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) onForm.add(e.target); else onForm.delete(e.target); });
+        bar.classList.toggle('near-form', onForm.size > 0);
+      });
+      $('form[data-form]').forEach(function (f) { formIo.observe(f); });
+    }
 
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });

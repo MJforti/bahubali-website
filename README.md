@@ -22,9 +22,14 @@ Open `assets/js/config.js` and fill in:
 2. `whatsapp`: enables every WhatsApp button with a pre-filled message
 3. `email`, `address`, `hours`: shown in the contact section
 4. `web3formsKey`: free key from web3forms.com so forms are emailed to you. Without it, forms hand the enquiry to WhatsApp.
-5. `mapEmbed`: in Google Maps choose Share, Embed a map, and paste the `src` URL so the pin is exact.
+5. `photos`: names of photos you have added (see below).
+6. `mapEmbed`: in Google Maps choose Share, Embed a map, and paste the `src` URL so the pin is exact.
 
 Until `phone` and `whatsapp` are set, those buttons appear disabled.
+
+## Adding photos
+
+Each photo needs two WebP files in `assets/img/photos/`: `NAME-800.webp` (800px wide) and `NAME-1600.webp` (1600px wide). Names: `hero`, `cement`, `steel`, `plumbing`, `electrical`, `paints`, `fasteners`, `hardware`, `roofing`, `tiles`. Then add the name to `photos` in `assets/js/config.js`, for example `photos: ["hero", "cement"]`. Categories without a photo show an icon panel, so you can add photos one at a time. Use only real photos you own or licensed images; do not present generated or stock images as your own premises or staff.
 
 ## Preview locally
 
