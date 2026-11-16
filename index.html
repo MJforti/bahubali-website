@@ -19,7 +19,7 @@
 <meta name="theme-color" content="#181818">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/img/photos/hero-1600.webp" imagesrcset="assets/img/photos/hero-800.webp 800w, assets/img/photos/hero-1600.webp 1600w, assets/img/photos/hero-2400.webp 2400w" imagesizes="(min-width: 1024px) 42vw, 100vw" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/store/sign-front.webp">
 <link rel="stylesheet" href="assets/css/styles.css">
 <script>document.documentElement.classList.remove('no-js')</script>
 <script type="application/ld+json">
@@ -96,22 +96,11 @@
         <span class="caption-2 muted">Quotations are free, with no obligation to order.</span>
       </div>
     </div>
-    <div class="hero-visual" data-photo-frame>
-      <img class="photo" src="assets/img/photos/hero-1600.webp" srcset="assets/img/photos/hero-800.webp 800w, assets/img/photos/hero-1600.webp 1600w, assets/img/photos/hero-2400.webp 2400w" sizes="(min-width: 1024px) 42vw, 100vw" data-photo="hero" alt="Interior of a building materials warehouse with stocked racking" width="2400" height="1557" fetchpriority="high">
-      <div class="hero-index" aria-label="Product categories">
-        <p class="caption-3 index-head">Materials we supply</p>
-        <ol class="index-list">
-          <li><a href="#products"><span class="idx">01</span><span class="title-2">Cement and binding materials</span></a></li>
-          <li><a href="#products"><span class="idx">02</span><span class="title-2">Steel and TMT bars</span></a></li>
-          <li><a href="#products"><span class="idx">03</span><span class="title-2">Plumbing and sanitary</span></a></li>
-          <li><a href="#products"><span class="idx">04</span><span class="title-2">Electrical supplies</span></a></li>
-          <li><a href="#products"><span class="idx">05</span><span class="title-2">Paints and coatings</span></a></li>
-          <li><a href="#products"><span class="idx">06</span><span class="title-2">Tools and fasteners</span></a></li>
-          <li><a href="#products"><span class="idx">07</span><span class="title-2">Door and window hardware</span></a></li>
-          <li><a href="#products"><span class="idx">08</span><span class="title-2">Roofing materials</span></a></li>
-          <li><a href="#products"><span class="idx">09</span><span class="title-2">Tiles and flooring</span></a></li>
-        </ol>
+    <div class="hero-visual">
+      <div class="store3d" id="store3d" tabindex="0" role="img" aria-label="Three dimensional model of the Bahubali Enterprises storefront in Bijoynagar. Drag or use the arrow keys to turn it.">
+        <img class="store-flat" src="assets/img/store/storefront.webp" alt="Bahubali Enterprises storefront in Bijoynagar, with signboards for TMT rod and cement, pipes and fittings, sanitaryware, tiles, paints and more" width="544" height="740" fetchpriority="high">
       </div>
+      <p class="store-hint caption-4" aria-hidden="true"><span class="hint-arrow">&larr;</span>Drag to turn<span class="hint-arrow">&rarr;</span></p>
     </div>
   </div>
   <div class="hero-band">
@@ -432,5 +421,6 @@
 
 <script src="assets/js/config.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/store3d.js" defer></script>
 </body>
 </html>

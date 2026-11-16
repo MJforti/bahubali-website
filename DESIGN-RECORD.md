@@ -36,3 +36,4 @@ Check this before changing anything visual. Base rules: landing-page-design skil
 - Audit pass 2: who we serve, quote and partner forms, FAQ, contact, final CTA.
 - Redesign: premium industrial direction. Graphite header bar, split hero with materials index, photo ready catalogue with two feature tiles, dark numbered benefits, process timeline, dark quotation form, amber final CTA, four column footer, sitemap.
 - Photography: ten generated images added (watermark cropped), responsive WebP, hero preloaded; hero category index becomes a compact caption over the photo; share image rebuilt from the hero.
+- Hero: interactive 3D storefront from the real shop photo (CSS 3D layers, drag, touch and arrow keys, idle sway off under reduced motion) replaces the warehouse photo and category index; share image now shows the storefront.
