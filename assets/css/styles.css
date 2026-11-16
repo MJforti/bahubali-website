@@ -301,3 +301,14 @@ em, i { font-style: normal; }
 @media (max-width: 479px) { .nav { width: 100%; } .nav-actions .btn { display: none; } }
 @media (min-width: 1100px) { .hero-grid { padding-top: var(--s-700); } }
 [hidden] { display: none !important; }
+
+/* Product categories: compact rows, one tap target each, no repeated link text */
+.cats { gap: var(--s-100); }
+.cat { display: flex; align-items: center; gap: var(--s-200); height: 100%; padding: var(--s-200); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-2xl); }
+.cat > .ph:first-child { font-size: 32px; color: var(--accent); flex: none; }
+.cat div { flex: 1; display: grid; gap: var(--s-25); }
+.cat p { color: var(--muted); }
+.cat-go { font-size: 20px; color: var(--muted); flex: none; transition: transform 500ms var(--ease), color 300ms var(--ease); }
+.cat:hover .cat-go { transform: translateX(4px); color: var(--ink); }
+@media (min-width: 960px) { .cats { gap: var(--s-200); } .cat { padding: var(--s-300); } }
+@media (prefers-reduced-motion: reduce) { .cat:hover .cat-go { transform: none; } }
