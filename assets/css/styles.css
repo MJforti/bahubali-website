@@ -312,3 +312,11 @@ em, i { font-style: normal; }
 .cat:hover .cat-go { transform: translateX(4px); color: var(--ink); }
 @media (min-width: 960px) { .cats { gap: var(--s-200); } .cat { padding: var(--s-300); } }
 @media (prefers-reduced-motion: reduce) { .cat:hover .cat-go { transform: none; } }
+
+/* Benefits: open text list beside the heading, no boxes */
+.split { display: grid; gap: var(--s-500); }
+.benefits { display: grid; gap: var(--s-400); }
+.benefits li { display: grid; gap: var(--s-75); }
+.benefits p { color: var(--muted); }
+@media (min-width: 640px) { .benefits { grid-template-columns: 1fr 1fr; gap: var(--s-500) var(--s-400); } }
+@media (min-width: 960px) { .split { grid-template-columns: 4fr 8fr; gap: var(--s-700); } }
