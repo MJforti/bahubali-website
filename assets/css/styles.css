@@ -320,3 +320,12 @@ em, i { font-style: normal; }
 .benefits p { color: var(--muted); }
 @media (min-width: 640px) { .benefits { grid-template-columns: 1fr 1fr; gap: var(--s-500) var(--s-400); } }
 @media (min-width: 960px) { .split { grid-template-columns: 4fr 8fr; gap: var(--s-700); } }
+
+/* How it works: a numbered sequence, not three more cards */
+.steps { display: grid; gap: var(--s-400); }
+.steps li { display: flex; gap: var(--s-300); }
+.steps .step-num { flex: none; width: 40px; }
+.steps div { display: grid; gap: var(--s-75); align-content: start; }
+.steps p { color: var(--muted); }
+.steps-cta { margin-top: var(--s-500); }
+@media (min-width: 960px) { .steps { grid-template-columns: repeat(3, 1fr); gap: var(--s-600); } .steps li { flex-direction: column; gap: var(--s-200); } }
