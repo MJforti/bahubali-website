@@ -230,8 +230,7 @@ em, i { font-style: normal; }
 .tile > a:active { transform: scale(0.99); }
 .tile-media { position: relative; aspect-ratio: 4 / 3; background: var(--dark-2); overflow: hidden; display: grid; place-items: center; }
 .tile-feature .tile-media { aspect-ratio: 16 / 10; }
-/* Without a photo the icon panel stays short on phones so the catalogue does not become a wall of dark blocks */
-@media (max-width: 639px) { .tile:not(.has-photo-tile) .tile-media { aspect-ratio: 21 / 9; } .tile a.has-photo .tile-media { aspect-ratio: 4 / 3; } }
+
 .tile-media .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
 .has-photo .tile-media .photo { opacity: 1; }
 .tile > a:hover .photo { transform: scale(1.04); }
@@ -425,3 +424,16 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   .tile > a:hover, .tile > a:hover .photo, .tile > a:hover .tile-icon, .segment:hover, .index-list a:hover, .btn:active, .btn:hover .ph-arrow-right, .text-link:hover .ph-arrow-right, .tile > a:hover .tile-cta .ph { transform: none; }
   .menu-toggle span, .skip-link, .faq-list summary .ph, .nav-links a::after { transition: none; }
 }
+.no-js .photo { opacity: 1; }
+.no-js .tile-icon { display: none; }
+
+/* Hero with photo: the category index becomes a compact caption so the photograph carries the panel */
+.has-photo .hero-index { margin: var(--s-200); width: auto; padding: var(--s-200) var(--s-300); }
+.has-photo .index-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-300); }
+.has-photo .index-list li a { padding: var(--s-75) 0; gap: var(--s-100); }
+.has-photo .index-list li + li a { box-shadow: none; }
+.has-photo .index-list .title-2 { font-size: 14px; line-height: 20px; }
+.has-photo .index-list .idx { width: 16px; font-size: 12px; line-height: 16px; }
+.has-photo .index-head { margin-bottom: var(--s-75); }
+@media (max-width: 1023px) { .hero-visual.has-photo { min-height: 560px; } }
+@media (max-width: 479px) { .has-photo .index-list { grid-template-columns: 1fr; } .hero-visual.has-photo { min-height: 640px; } }

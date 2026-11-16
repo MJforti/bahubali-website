@@ -17,7 +17,7 @@ Check this before changing anything visual. Base rules: landing-page-design skil
 - **Section rhythm:** light, stone and graphite sections alternate. Kicker line (24px amber rule + caption) above each section title. Lists separated with full width hairlines, never one sided card borders.
 - **Motion:** `cubic-bezier(0.22, 1, 0.36, 1)`, transform and opacity only, reduced motion respected.
 - **Icons:** Phosphor regular (self hosted subset).
-- **Photography:** only realistic, licensed or owner supplied photos, listed in `SITE.photos` (config.js). Without a photo a category shows a graphite icon panel.
+- **Photography:** one consistent set: soft daylight, warm neutral and graphite tones, stone or warehouse floor, no people, text or logos. Category images 3:2, hero symmetric warehouse aisle. Used as illustrations of material types, never captioned as the Bahubali premises. Without a photo a frame falls back to the graphite icon panel.
 - **Messaging:** hero headline "Building better foundations. Supplying every requirement." with the approved supporting text; benefits, steps and FAQs as approved.
 
 ## Rejected
@@ -35,3 +35,4 @@ Check this before changing anything visual. Base rules: landing-page-design skil
 - Audit pass 1: hero and CTA system, about, product categories, benefits, how it works.
 - Audit pass 2: who we serve, quote and partner forms, FAQ, contact, final CTA.
 - Redesign: premium industrial direction. Graphite header bar, split hero with materials index, photo ready catalogue with two feature tiles, dark numbered benefits, process timeline, dark quotation form, amber final CTA, four column footer, sitemap.
+- Photography: ten generated images added (watermark cropped), responsive WebP, hero preloaded; hero category index becomes a compact caption over the photo; share image rebuilt from the hero.

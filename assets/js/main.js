@@ -27,18 +27,12 @@
   $('[data-row="phone"]').forEach(function (el) { if (!S.phone) el.hidden = true; });
   $('[data-row="whatsapp"]').forEach(function (el) { if (!S.whatsapp) el.hidden = true; });
   $('.alt').forEach(function (el) { if (!el.querySelector('a:not([hidden]), button')) el.hidden = true; });
-  /* Photos: only files listed in SITE.photos are requested, so a missing image never shows as broken */
-  var photos = S.photos || [];
+  /* Photos: frames switch from the icon panel to the photo once it has loaded */
   $('img[data-photo]').forEach(function (img) {
-    var name = img.getAttribute('data-photo');
-    if (photos.indexOf(name) === -1) { img.remove(); return; }
-    var base = 'assets/img/photos/' + name;
     var frame = img.closest('[data-photo-frame]');
-    img.addEventListener('load', function () { if (frame) frame.classList.add('has-photo'); });
+    function done() { if (frame && img.naturalWidth) frame.classList.add('has-photo'); }
+    if (img.complete) done(); else img.addEventListener('load', done);
     img.addEventListener('error', function () { img.remove(); });
-    img.srcset = base + '-800.webp 800w, ' + base + '-1600.webp 1600w';
-    img.sizes = name === 'hero' ? '(min-width: 1024px) 42vw, 100vw' : '(min-width: 1024px) 50vw, 100vw';
-    img.src = base + '-1600.webp';
   });
   var mf = document.getElementById('map-frame'); if (mf && S.mapEmbed) mf.src = S.mapEmbed;
   var ml = document.getElementById('map-link'); if (ml && S.mapLink) ml.href = S.mapLink;

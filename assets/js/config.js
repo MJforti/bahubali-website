@@ -15,10 +15,6 @@ window.SITE = {
   // Free Web3Forms access key (web3forms.com). When set, forms are emailed to you.
   // When empty, forms hand the enquiry over to WhatsApp instead.
   web3formsKey: "",
-  // Photos that exist in assets/img/photos as NAME-800.webp and NAME-1600.webp.
-  // Names: hero, cement, steel, plumbing, electrical, paints, fasteners, hardware, roofing, tiles.
-  // A category without a photo shows its icon panel instead.
-  photos: [],
   // Google Maps links
   mapLink: "https://maps.app.goo.gl/s28Tkmbo3NxCLpEr9",
   mapEmbed: "https://www.google.com/maps?q=Bahubali+Enterprise,+Bijoynagar,+Assam&output=embed"
