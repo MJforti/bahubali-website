@@ -54,3 +54,7 @@ Any static host works. Publish directory is the repository root, with no build c
 - **GitHub Pages**: Settings, Pages, deploy from branch, root folder
 
 After connecting a domain, set `og:image` in `index.html` to the full URL of `assets/img/og-image.png` and add the site link to the Google Business Profile.
+
+## License
+
+[MIT](LICENSE)
