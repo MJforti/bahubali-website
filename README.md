@@ -2,6 +2,8 @@
 
 Static landing page for Bahubali Enterprises (hardware and building materials, Bijoynagar, Assam). Plain HTML, CSS and JavaScript with no build step.
 
+**Live site:** https://bahubali-website.vercel.app
+
 ## Files
 
 | File | Purpose |
